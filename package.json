@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/mijatovicdragan/cypress1#readme",
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
     "cypress": "^12.5.1"
   },
   "dependencies": {

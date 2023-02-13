@@ -1,11 +1,12 @@
 import { registerPage } from "../page_objects/registerPage";
+import {faker} from '@faker-js/faker';
 
 describe("Register test", () => {
     let userData = {
-        firstName: "Dragan",
-        lastName: "Mijatovic",
-        email: "vivify12@test.com",
-        password: "dragan123",
+        firstName: faker.name.firstName(),
+        lastName: faker.nname.lastName(),
+        email: faker.internet.email(),
+        password: faker.lorem.word(8) + 1,
         shortPassword: "pass",
         invalidEmail: "testmail.com"
     };
@@ -16,7 +17,8 @@ describe("Register test", () => {
         cy.url().should("contain", "/register");
     });
 
-    it("register with valid data",() => {
+
+    it("register with valid data",() => {    
         registerPage.registerWithValidData(
             userData.firstName,
             userData.lastName,
@@ -26,7 +28,4 @@ describe("Register test", () => {
         cy.url().should("not.contain", "/register");
     });
 
-
-
-
-} )
+} );

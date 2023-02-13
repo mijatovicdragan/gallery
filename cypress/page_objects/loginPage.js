@@ -1,6 +1,10 @@
-class LoginPage {
-  get loginLink() {
+class AuthLogin {
+    get loginLink() {
     return cy.get("a[href='/login']");
+  }
+
+  get loginPageHeading(){
+    return cy.get("h1");
   }
 
   get emailInput() {
@@ -15,6 +19,10 @@ class LoginPage {
     return cy.get("button");
   }
 
+  get errorMessage(){
+    return cy.get(".alert");
+  }
+
   login(email, password) {
     this.emailInput.type(email);
     this.passwordInput.type(password);
@@ -22,4 +30,4 @@ class LoginPage {
   }
 }
 
-export const loginPage = new LoginPage();
+export const authLogin = new AuthLogin();

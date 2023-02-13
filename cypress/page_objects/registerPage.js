@@ -41,6 +41,7 @@ class RegisterPage {
     this.submitButton.click();
   
  }
+
 }
 
 export const registerPage = new RegisterPage();
