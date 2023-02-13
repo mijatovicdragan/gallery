@@ -1,9 +1,9 @@
 class AuthLogin {
-    get loginLink() {
+  get loginLink() {
     return cy.get("a[href='/login']");
   }
 
-  get loginPageHeading(){
+  get loginPageHeading() {
     return cy.get("h1");
   }
 
@@ -19,7 +19,7 @@ class AuthLogin {
     return cy.get("button");
   }
 
-  get errorMessage(){
+  get errorMessage() {
     return cy.get(".alert");
   }
 
